@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
-  <App xmlns="" ProductID="{7f86dcc4-ed32-471e-ac4a-b0fecf104712}" Title="RunKeeper3000" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="WhereAmI author" Description="Sample description" Publisher="WhereAmI">
+  <App xmlns="" ProductID="{7f86dcc4-ed32-471e-ac4a-b0fecf104712}" Title="WhereAmI" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="WhereAmI author" Description="Sample description" Publisher="WhereAmI">
     <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_GAMERSERVICES" />
@@ -26,7 +26,7 @@
         <TemplateType5>
           <BackgroundImageURI IsRelative="true" IsResource="false">Background.png</BackgroundImageURI>
           <Count>0</Count>
-          <Title>RunKeeper3000</Title>
+          <Title>WhereAmI</Title>
         </TemplateType5>
       </PrimaryToken>
     </Tokens>

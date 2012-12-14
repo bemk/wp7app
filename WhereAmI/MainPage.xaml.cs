@@ -35,7 +35,7 @@ namespace WhereAmI
         public MainPage()
         {
             InitializeComponent();
-            map1.ZoomBarVisibility = Visibility.Visible;                       // Zoom Buttons Visibility 
+           // map1.ZoomBarVisibility = Visibility.Visible;                       // Zoom Buttons Visibility 
             joggingPolyLine = new MapPolyline();                               //jogging path visualization
             joggingPolyLine.Stroke = new SolidColorBrush(Colors.Blue);
             joggingPolyLine.StrokeThickness = 5;
