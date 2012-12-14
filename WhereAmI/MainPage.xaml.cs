@@ -64,6 +64,11 @@ namespace WhereAmI
 
             geoPositions.Add(new GeoCoordinate(e.Position.Location.Latitude, e.Position.Location.Longitude));
             joggingPolyLine.Locations.Add(new GeoCoordinate(e.Position.Location.Latitude, e.Position.Location.Longitude));
+
+            double latitude = geowatcher.Position.Location.Latitude;
+            double longitude = geowatcher.Position.Location.Longitude;
+            map1.Center = new GeoCoordinate(latitude, longitude);
+            map1.ZoomLevel = 16;
         }
 
         void GeoPositionChanged(GeoPositionChangedEventArgs<GeoCoordinate> e)
@@ -112,9 +117,12 @@ namespace WhereAmI
             {
                 geowatcher.Stop();
                 geoWatcherCheck = false;
+                NavigationService.Navigate(new Uri("/WorkoutSavePage.xaml", UriKind.RelativeOrAbsolute));
             }
             else {/*Do nothing please */}
         }
+
+
 
         private void startButton_Click(object sender, RoutedEventArgs e)
         {
@@ -122,6 +130,8 @@ namespace WhereAmI
             {
                 geowatcher.Start();
                 geoWatcherCheck = true;
+                
+
             }
             else { /*Do nothing please */} 
         }

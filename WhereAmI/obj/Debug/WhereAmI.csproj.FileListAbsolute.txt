@@ -39,3 +39,4 @@ C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\WhereAmI.g.r
 C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\WhereAmI.dll
 C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\WhereAmI.pdb
 C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\XapCacheFile.xml
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\WorkoutSavePage.g.i.cs
