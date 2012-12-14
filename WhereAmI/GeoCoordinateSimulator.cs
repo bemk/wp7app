@@ -178,7 +178,7 @@ namespace SharpGIS.WinPhone.Gps
 			}
 			private set
 			{
-				if (value != position)
+				if (value != position && value != null)
 				{
 					position = value;
 					RaisePositionChanged(new GeoPositionChangedEventArgs<GeoCoordinate>(position));

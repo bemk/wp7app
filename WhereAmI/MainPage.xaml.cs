@@ -61,6 +61,7 @@ namespace WhereAmI
         void watcher_PositionChanged(object sender, GeoPositionChangedEventArgs<GeoCoordinate> e)
         {
             myPositionText.Text = "Latitude: " + e.Position.Location.Latitude + "\n Longitude: " + e.Position.Location.Longitude;
+
             geoPositions.Add(new GeoCoordinate(e.Position.Location.Latitude, e.Position.Location.Longitude));
             joggingPolyLine.Locations.Add(new GeoCoordinate(e.Position.Location.Latitude, e.Position.Location.Longitude));
         }
@@ -99,7 +100,7 @@ namespace WhereAmI
             {
                 double latitude = geowatcher.Position.Location.Latitude;
                 double longitude = geowatcher.Position.Location.Longitude;
-                map1.Center = new GeoCoordinate(geowatcher.Position.Location.Latitude, geowatcher.Position.Location.Longitude);
+                map1.Center = new GeoCoordinate(latitude, longitude);
                 map1.ZoomLevel = 16;
             }
             else {/*Do nothing please */}
