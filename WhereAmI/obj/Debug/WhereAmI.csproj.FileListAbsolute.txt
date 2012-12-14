@@ -1,0 +1,41 @@
+C:\Users\Paul\Documents\school\ATM-V-TI-2.2 software engineering\WhereAmI\WhereAmI\Bin\Debug\ApplicationIcon.png
+C:\Users\Paul\Documents\school\ATM-V-TI-2.2 software engineering\WhereAmI\WhereAmI\Bin\Debug\Background.png
+C:\Users\Paul\Documents\school\ATM-V-TI-2.2 software engineering\WhereAmI\WhereAmI\Bin\Debug\WhereAmI.dll
+C:\Users\Paul\Documents\school\ATM-V-TI-2.2 software engineering\WhereAmI\WhereAmI\Bin\Debug\WhereAmI.pdb
+C:\Users\Paul\Documents\school\ATM-V-TI-2.2 software engineering\WhereAmI\WhereAmI\Bin\Debug\AppManifest.xaml
+C:\Users\Paul\Documents\school\ATM-V-TI-2.2 software engineering\WhereAmI\WhereAmI\Bin\Debug\WhereAmI.xap
+C:\Users\Paul\Documents\school\ATM-V-TI-2.2 software engineering\WhereAmI\WhereAmI\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Paul\Documents\school\ATM-V-TI-2.2 software engineering\WhereAmI\WhereAmI\obj\Debug\App.g.i.cs
+C:\Users\Paul\Documents\school\ATM-V-TI-2.2 software engineering\WhereAmI\WhereAmI\obj\Debug\MainPage.g.i.cs
+C:\Users\Paul\Documents\school\ATM-V-TI-2.2 software engineering\WhereAmI\WhereAmI\obj\Debug\WhereAmI.g.resources
+C:\Users\Paul\Documents\school\ATM-V-TI-2.2 software engineering\WhereAmI\WhereAmI\obj\Debug\WhereAmI.dll
+C:\Users\Paul\Documents\school\ATM-V-TI-2.2 software engineering\WhereAmI\WhereAmI\obj\Debug\WhereAmI.pdb
+C:\Users\Paul\Documents\school\ATM-V-TI-2.2 software engineering\WhereAmI\WhereAmI\obj\Debug\XapCacheFile.xml
+C:\Users\Andrew Servania\Desktop\TI Periode 2.2\IPR Windows Phone .Net Project 6 EC\GPS Science\WhereAmI\WhereAmI\obj\Debug\App.g.i.cs
+C:\Users\Andrew Servania\Desktop\TI Periode 2.2\IPR Windows Phone .Net Project 6 EC\GPS Science\WhereAmI\WhereAmI\obj\Debug\MainPage.g.i.cs
+C:\Users\Andrew Servania\Desktop\TI Periode 2.2\IPR Windows Phone .Net Project 6 EC\GPS Science\WhereAmI\WhereAmI\obj\Debug\WhereAmI.g.resources
+C:\Users\Andrew Servania\Desktop\TI Periode 2.2\IPR Windows Phone .Net Project 6 EC\GPS Science\WhereAmI\WhereAmI\Bin\Debug\ApplicationIcon.png
+C:\Users\Andrew Servania\Desktop\TI Periode 2.2\IPR Windows Phone .Net Project 6 EC\GPS Science\WhereAmI\WhereAmI\Bin\Debug\Background.png
+C:\Users\Andrew Servania\Desktop\TI Periode 2.2\IPR Windows Phone .Net Project 6 EC\GPS Science\WhereAmI\WhereAmI\Bin\Debug\WhereAmI.dll
+C:\Users\Andrew Servania\Desktop\TI Periode 2.2\IPR Windows Phone .Net Project 6 EC\GPS Science\WhereAmI\WhereAmI\Bin\Debug\WhereAmI.pdb
+C:\Users\Andrew Servania\Desktop\TI Periode 2.2\IPR Windows Phone .Net Project 6 EC\GPS Science\WhereAmI\WhereAmI\Bin\Debug\AppManifest.xaml
+C:\Users\Andrew Servania\Desktop\TI Periode 2.2\IPR Windows Phone .Net Project 6 EC\GPS Science\WhereAmI\WhereAmI\Bin\Debug\WhereAmI.xap
+C:\Users\Andrew Servania\Desktop\TI Periode 2.2\IPR Windows Phone .Net Project 6 EC\GPS Science\WhereAmI\WhereAmI\Bin\Debug\Microsoft.Phone.Controls.Maps.dll
+C:\Users\Andrew Servania\Desktop\TI Periode 2.2\IPR Windows Phone .Net Project 6 EC\GPS Science\WhereAmI\WhereAmI\Bin\Debug\Microsoft.Phone.Controls.Maps.xml
+C:\Users\Andrew Servania\Desktop\TI Periode 2.2\IPR Windows Phone .Net Project 6 EC\GPS Science\WhereAmI\WhereAmI\obj\Debug\WhereAmI.dll
+C:\Users\Andrew Servania\Desktop\TI Periode 2.2\IPR Windows Phone .Net Project 6 EC\GPS Science\WhereAmI\WhereAmI\obj\Debug\WhereAmI.pdb
+C:\Users\Andrew Servania\Desktop\TI Periode 2.2\IPR Windows Phone .Net Project 6 EC\GPS Science\WhereAmI\WhereAmI\obj\Debug\XapCacheFile.xml
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\ApplicationIcon.png
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\Background.png
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\WhereAmI.dll
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\WhereAmI.pdb
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\AppManifest.xaml
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\WhereAmI.xap
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\Microsoft.Phone.Controls.Maps.dll
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\Microsoft.Phone.Controls.Maps.xml
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\App.g.i.cs
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\MainPage.g.i.cs
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\WhereAmI.g.resources
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\WhereAmI.dll
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\WhereAmI.pdb
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\XapCacheFile.xml
