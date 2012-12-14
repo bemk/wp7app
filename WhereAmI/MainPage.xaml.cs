@@ -30,7 +30,8 @@ namespace WhereAmI
         public List<GeoCoordinate> geoPositions = new List<GeoCoordinate>();   // store all GPS coordinates
         public MapPolyline joggingPolyLine;  
         public double hourS, minS, secS, milliS = 0;
-        
+
+        public bool geoWatcherCheck = false;
         public MainPage()
         {
             InitializeComponent();
@@ -53,14 +54,13 @@ namespace WhereAmI
                         geowatcher = new GeoCoordinateWatcher(GeoPositionAccuracy.High);
                     }
                     geowatcher.PositionChanged += watcher_PositionChanged; 
-                    geowatcher.Start();               
+                                 
         }
 
 
         void watcher_PositionChanged(object sender, GeoPositionChangedEventArgs<GeoCoordinate> e)
         {
             myPositionText.Text = "Latitude: " + e.Position.Location.Latitude + "\n Longitude: " + e.Position.Location.Longitude;
-            map1.Center = new GeoCoordinate(geowatcher.Position.Location.Latitude, geowatcher.Position.Location.Longitude);
             geoPositions.Add(new GeoCoordinate(e.Position.Location.Latitude, e.Position.Location.Longitude));
             joggingPolyLine.Locations.Add(new GeoCoordinate(e.Position.Location.Latitude, e.Position.Location.Longitude));
         }
@@ -93,12 +93,36 @@ namespace WhereAmI
             }
         }
 
-        private void myPositionButton_Click(object sender, RoutedEventArgs e) // When called, the map will indicate where the your current position is
+        private void locateMeButton_Click(object sender, RoutedEventArgs e) // When called, the map will indicate where the your current position is
         {
-            double latitude = geowatcher.Position.Location.Latitude;
-            double longitude = geowatcher.Position.Location.Longitude;
-            map1.Center = new GeoCoordinate(geowatcher.Position.Location.Latitude, geowatcher.Position.Location.Longitude);
-            map1.ZoomLevel = 16;
+            if (geoWatcherCheck == true)
+            {
+                double latitude = geowatcher.Position.Location.Latitude;
+                double longitude = geowatcher.Position.Location.Longitude;
+                map1.Center = new GeoCoordinate(geowatcher.Position.Location.Latitude, geowatcher.Position.Location.Longitude);
+                map1.ZoomLevel = 16;
+            }
+            else {/*Do nothing please */}
+        }
+
+        private void endWorkoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (geoWatcherCheck == true)
+            {
+                geowatcher.Stop();
+                geoWatcherCheck = false;
+            }
+            else {/*Do nothing please */}
+        }
+
+        private void startButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (geoWatcherCheck == false)
+            {
+                geowatcher.Start();
+                geoWatcherCheck = true;
+            }
+            else { /*Do nothing please */} 
         }
     }
 
