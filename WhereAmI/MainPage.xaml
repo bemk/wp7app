@@ -1,0 +1,58 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="WhereAmI.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True" xmlns:my="clr-namespace:Microsoft.Phone.Controls.Maps;assembly=Microsoft.Phone.Controls.Maps">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28"></StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <TextBlock Height="109" HorizontalAlignment="Left" Margin="12,608,0,0" Name="myPositionText" Text="GPS Coordinates" VerticalAlignment="Top" Width="421" />
+            <Button Content="Locate Me" Height="72" HorizontalAlignment="Left" Margin="130,530,0,0" Name="myPositionButton" VerticalAlignment="Top" Width="201" Click="myPositionButton_Click" DataContext="{Binding}" />
+            <my:Map Height="520" HorizontalAlignment="Left" Name="map1" VerticalAlignment="Top" Width="462" CredentialsProvider="ApAcGR3lHuEM4Up7Kz3qnndrI9IHNRuk13_WzB9TiF9rtl3SinYDMQ2Yr0mIF0fV"/>
+        </Grid>
+        
+        <!--Andy Added PushpinPanel -->
+        <Grid x:Name="PushpinPanel" Grid.Row="1" Margin="12,0,12,0" Visibility="Collapsed">
+            <TextBox Height="68" HorizontalAlignment="Left" Margin="17,43,0,0" Name="XCoordinateField" InputScope="Digits" Text="" VerticalAlignment="Top" Width="433" />
+            <TextBox Height="68" HorizontalAlignment="Left" Margin="17,139,0,0" Name="YCoordinateField" InputScope="Digits" Text="" VerticalAlignment="Top" Width="433" />
+            <TextBlock Name="BannerTextBlock" Foreground="#FFFF9A00" HorizontalAlignment="Stretch" TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold" Margin="0,21,0,549" Text="X-Coordinate" />
+            <TextBlock Name="BannerTextBlock2" FontWeight="Bold" Foreground="#FFFF9A00" HorizontalAlignment="Stretch" Margin="0,117,0,453" Text="Y-Coordinate" TextAlignment="Center" TextWrapping="Wrap" />
+            <TextBlock Name="BannerTextBlock3" FontWeight="Bold" Foreground="#FFFF9A00" HorizontalAlignment="Stretch" Margin="9,213,-9,357" Text="Pushpin Text" TextAlignment="Center" TextWrapping="Wrap" />
+            <TextBox Height="68" HorizontalAlignment="Left" Margin="17,235,0,0" Name="PushpinTextField" Text="" VerticalAlignment="Top" Width="433" />
+            <TextBlock FontWeight="Bold" Foreground="#FFFF9A00" HorizontalAlignment="Stretch" Margin="12,387,12,138" Name="StatusBanner" Text="" TextAlignment="Center" TextWrapping="Wrap" />
+        </Grid>
+        <TextBlock x:Name="ApplicationTitle" Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}" Margin="24,12,12,6" />
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>
