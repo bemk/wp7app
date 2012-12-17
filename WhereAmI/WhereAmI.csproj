@@ -64,11 +64,20 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Tuple.cs" />
     <Compile Include="GeoCoordinateSimulator.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PreviousWorkoutListPage.xaml.cs">
+      <DependentUpon>PreviousWorkoutListPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorkoutDatabase.cs" />
+    <Compile Include="Workout.cs" />
+    <Compile Include="WorkoutMapStatisticsPage.xaml.cs">
+      <DependentUpon>WorkoutMapStatisticsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WorkoutSavePage.xaml.cs">
       <DependentUpon>WorkoutSavePage.xaml</DependentUpon>
     </Compile>
@@ -79,6 +88,14 @@
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
     <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PreviousWorkoutListPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WorkoutMapStatisticsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
