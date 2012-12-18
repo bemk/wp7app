@@ -43,7 +43,11 @@ namespace WhereAmI
             //routeLine.Locations.Add(new GeoCoordinate(34.1068, -117.695));
 
             map2.Children.Add(routeLine); // Where the second magic happens
-            
+            textBlock5.Text = workout.workoutName;
+            textBlock6.Text = workout.startTime;
+            textBlock7.Text = workout.distanceRan.ToString();
+            textBlock8.Text = workout.workoutDuration;
+
             //map2.Center = new GeoCoordinate(34.0568, -117.195);
             //map2.Center = new GeoCoordinate(30.00, -100.00);
             //map2.Center = 

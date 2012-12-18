@@ -17,7 +17,7 @@ namespace WhereAmI
     {
         public string workoutName { get; set; }
         public string startTime { get; set; }
-         public double distanceRan { get; set; }
+        public double distanceRan { get; set; }
         public string workoutDuration { get; set; }
 
         public MapPolyline routeLine = new MapPolyline();
