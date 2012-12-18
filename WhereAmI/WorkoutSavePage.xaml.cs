@@ -30,7 +30,7 @@ namespace WhereAmI
             textBlock7.Text  = workoutDuration;
         }
 
-        public void setValues(string currentElapsedTime, string currentWorkoutDuration)
+        public static void setValues(string currentElapsedTime, string currentWorkoutDuration)
         {
             elapsedTime = currentElapsedTime;
             workoutDuration = currentWorkoutDuration;
@@ -62,7 +62,7 @@ namespace WhereAmI
 
            workout.workoutName = workoutNameTextBox.Text;
            workout.startTime = DateTime.Now.ToString();
-           workout.workoutDuration = mainPage.workoutDuration;
+           workout.workoutDuration = workoutDuration;
           // workout.distanceRunned = Convert.ToDouble(kilometersTextBox.Text);
            //workout     workoutTimeTextBox
            workout.distanceRan = MainPage.totalDistanceRan;
