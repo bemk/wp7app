@@ -22,6 +22,7 @@ namespace WhereAmI
         private static MapPolyline mapPL = new MapPolyline();
         private static string elapsedTime;
         private static string workoutDuration;
+        private static List<Tuple<GeoCoordinate, DateTime>> route;
 
 
         public WorkoutSavePage()
@@ -32,10 +33,11 @@ namespace WhereAmI
             textBlock7.Text  = workoutDuration;
         }
 
-        public static void setValues(string currentElapsedTime, string currentWorkoutDuration)
+        public static void setValues(string currentElapsedTime, string currentWorkoutDuration, List<Tuple<GeoCoordinate, DateTime>> r)
         {
             elapsedTime = currentElapsedTime;
             workoutDuration = currentWorkoutDuration;
+            route = r;
         }
 
         private void workoutNameTextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -62,7 +64,7 @@ namespace WhereAmI
         {
            Workout workout = new Workout();
 
-           saveRoute(mainPage.positions, workoutNameTextBox.Text);
+           saveRoute(route, workoutNameTextBox.Text);
 
            workout.workoutName = workoutNameTextBox.Text;
            workout.startTime = DateTime.Now.ToString();

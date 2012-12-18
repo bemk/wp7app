@@ -127,7 +127,7 @@ namespace WhereAmI
                 geoWatcherCheck = false;
                 WorkoutSavePage.setWorkoutRoute(joggingPolyLine);
                 StopTimer();
-                WorkoutSavePage.setValues(startTime.ToString(), elapsedTime.ToString());
+                WorkoutSavePage.setValues(startTime.ToString(), elapsedTime.ToString(), positions);
                 totalDistanceRan = calculateDistance(positions);
                 NavigationService.Navigate(new Uri("/WorkoutSavePage.xaml", UriKind.RelativeOrAbsolute));
             }
