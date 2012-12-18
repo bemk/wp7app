@@ -286,7 +286,7 @@ namespace WhereAmI
         {
             Tuple<GeoCoordinate, DateTime>prev = null;
             double result = 0;
-            foreach (Tuple<GeoCoordinate, DateTime> t in l)
+            foreach (Tuple<GeoCoordinate, DateTime> t in l) // <= LINQ query!!!
             {
                 if (prev != null)
                 {

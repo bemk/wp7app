@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Xml.Linq;
 using System.Net;
 using System.Windows;
 using System.Windows.Controls;
@@ -11,6 +12,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Controls.Maps;
+using System.Device.Location;
 
 namespace WhereAmI
 {
@@ -60,6 +62,8 @@ namespace WhereAmI
         {
            Workout workout = new Workout();
 
+           saveRoute(mainPage.positions, workoutNameTextBox.Text);
+
            workout.workoutName = workoutNameTextBox.Text;
            workout.startTime = DateTime.Now.ToString();
            workout.workoutDuration = mainPage.workoutDuration;
@@ -75,6 +79,20 @@ namespace WhereAmI
         public static void setWorkoutRoute(MapPolyline mpl)
         {
             mapPL = mpl;
+        }
+
+        public void saveRoute(List<Tuple<GeoCoordinate, DateTime>> route, string name)
+        {
+            XElement r = new XElement("Routes",
+                new XElement("Route",
+                    new XAttribute("name", name),
+                    from l in route.ToArray()
+                    select new XElement("Waypoint",
+                        new XAttribute("Lat", l.item1.Latitude),
+                        new XAttribute("long", l.item1.Longitude),
+                        new XAttribute("stamp", l.item2.Ticks))));
+
+            System.Diagnostics.Debug.WriteLine(r);
         }
     }
 }
