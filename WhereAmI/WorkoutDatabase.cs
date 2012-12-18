@@ -46,7 +46,7 @@ namespace WhereAmI
             workout6.workoutName = "Example Empty Workout6";
 
             //DOESN'T WORK, DON'T KNOW THE FUCK YET -_-!
-            workout1.routeLine.Locations = new LocationCollection();
+            //workout1.routeLine.Locations = new LocationCollection();
             workout1.routeLine.Locations.Add(new GeoCoordinate(30.00, -100.00));
             workout1.routeLine.Locations.Add(new GeoCoordinate(31.00, -100.00));
             workout1.routeLine.Locations.Add(new GeoCoordinate(32.00, -100.00));

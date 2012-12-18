@@ -19,15 +19,15 @@ namespace WhereAmI
     public partial class WorkoutMapStatisticsPage : PhoneApplicationPage
     {
         MapPolyline routeLine;
-        static Workout workout = new Workout();
+        static Workout selectedWorkout = new Workout();
 
         public WorkoutMapStatisticsPage()
         {
             InitializeComponent();
             routeLine = new MapPolyline();
 
-           // routeLine.Locations = new LocationCollection();
-            routeLine.Locations = workout.routeLine.Locations; // Where the magic happens
+            // routeLine.Locations = new LocationCollection();
+            routeLine.Locations = selectedWorkout.routeLine.Locations; // Where the magic happens: Note: ALL routes MUST have a polyline, otherwise the application WILL ofcourse, CRASH!
 
             System.Diagnostics.Debug.WriteLine("Done 1");
             routeLine.Stroke = new SolidColorBrush(Colors.Blue);
@@ -43,28 +43,44 @@ namespace WhereAmI
             //routeLine.Locations.Add(new GeoCoordinate(34.1068, -117.695));
 
             map2.Children.Add(routeLine); // Where the second magic happens
-            textBlock5.Text = workout.workoutName;
-            textBlock6.Text = workout.startTime;
-            textBlock7.Text = workout.distanceRan.ToString();
-            textBlock8.Text = workout.workoutDuration;
-
+            textBlock5.Text = selectedWorkout.workoutName;
+            textBlock6.Text = selectedWorkout.startTime;
+            textBlock7.Text = selectedWorkout.distanceRan.ToString();
+            textBlock8.Text = selectedWorkout.workoutDuration;
+            double latitude;
+            double longitude;
+            getWorkoutRouteLocation(out latitude, out longitude);
             //map2.Center = new GeoCoordinate(34.0568, -117.195);
             //map2.Center = new GeoCoordinate(30.00, -100.00);
-            //map2.Center = 
-           // System.Diagnostics.Debug.WriteLine(routeLine.Locations.Select<routeLine.Locations, GeoCoordinate>(
+            map2.Center = new GeoCoordinate(latitude, longitude);
+
+            // System.Diagnostics.Debug.WriteLine(routeLine.Locations.Select<routeLine.Locations, GeoCoordinate>(
             map2.ZoomLevel = 16;
+   
             
         }
 
 
-
-        public static void setWorkout(Workout selectedWorkout)
+        public static void setWorkout(Workout selectedWorkoutItem)
         {
-            workout = selectedWorkout;
-           // foreach 
+            selectedWorkout = selectedWorkoutItem;
+            // foreach 
             //System.Diagnostics.Debug.WriteLine(workout.routeLine.Locations);
         }
 
-       
+        public static void getWorkoutRouteLocation(out double latitude, out double longitude)
+        {
+            //var allCoordinates = from Workout workout in selectedWorkout select selectedWorkout.routeLine;
+           // List<GeoCoordinate> points = from point in selectedWorkout.routeLine.Locations select new GeoCoordinate(point.lat, point.lng);
+            //List<GeoCoordinate> a = selectedWorkout.routeCoordinates;
+            //double latitude2 = from GeoCoordinate geoCor in selectedWorkout.routeCoordinates.First() select geoCor.Latitude;
+            GeoCoordinate abb = selectedWorkout.routeCoordinates.First();
+            latitude = abb.Latitude;
+            longitude = abb.Longitude;
+
+           // selectedWorkout.routeCoordinates.First() 
+
+        }
+
     }
 }

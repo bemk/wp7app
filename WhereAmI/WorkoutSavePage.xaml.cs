@@ -11,6 +11,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Controls.Maps;
+using System.Device.Location;
 
 namespace WhereAmI
 {
@@ -18,6 +19,7 @@ namespace WhereAmI
     {
         public static MainPage mainPage = new MainPage();
         private static MapPolyline mapPL = new MapPolyline();
+        private static List<GeoCoordinate> routeCoordinates = new List<GeoCoordinate>();
         private static string elapsedTime;
         private static string workoutDuration;
 
@@ -30,10 +32,11 @@ namespace WhereAmI
             textBlock7.Text  = workoutDuration;
         }
 
-        public static void setValues(string currentElapsedTime, string currentWorkoutDuration)
+        public static void setValues(string currentElapsedTime, string currentWorkoutDuration, List<GeoCoordinate> route)
         {
             elapsedTime = currentElapsedTime;
             workoutDuration = currentWorkoutDuration;
+            routeCoordinates = route;
         }
 
         private void workoutNameTextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -65,6 +68,7 @@ namespace WhereAmI
            workout.workoutDuration = workoutDuration;
           // workout.distanceRunned = Convert.ToDouble(kilometersTextBox.Text);
            //workout     workoutTimeTextBox
+           workout.routeCoordinates = routeCoordinates;
            workout.distanceRan = MainPage.totalDistanceRan;
            workout.routeLine = mapPL;
            MainPage.mainDatabase.addWorkoutToDatabase(workout);

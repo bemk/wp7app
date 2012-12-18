@@ -29,6 +29,7 @@ namespace WhereAmI
         public IGeoPositionWatcher<GeoCoordinate> geowatcher;                                               // necessary variable for jogging simulation
         public bool AerialMode = false;
         public List<Tuple<GeoCoordinate, DateTime>> positions = new List<Tuple<GeoCoordinate, DateTime>>(); // store all GPS coordinates along with timestamps on each GPS registered coordinate
+        public List<GeoCoordinate> routeCoordinates = new List<GeoCoordinate>();
         public MapPolyline joggingPolyLine { get; set; }     
         public double hourS, minS, secS, milliS = 0;
         public bool geoWatcherCheck = false;
@@ -75,6 +76,7 @@ namespace WhereAmI
         {
             myPositionText.Text = "Latitude: " + e.Position.Location.Latitude + "\n Longitude: " + e.Position.Location.Longitude;
             GeoCoordinate g = new GeoCoordinate(e.Position.Location.Latitude, e.Position.Location.Longitude);
+            routeCoordinates.Add(g);
             DateTime t = new DateTime(DateTime.Now.Ticks);
             Tuple<GeoCoordinate, DateTime> tuple = new Tuple<GeoCoordinate, DateTime>(g, t);
             positions.Add(tuple);
@@ -127,7 +129,7 @@ namespace WhereAmI
                 geoWatcherCheck = false;
                 WorkoutSavePage.setWorkoutRoute(joggingPolyLine);
                 StopTimer();
-                WorkoutSavePage.setValues(startTime.ToString(), elapsedTime.ToString());
+                WorkoutSavePage.setValues(startTime.ToString(), elapsedTime.ToString(),routeCoordinates);
                 totalDistanceRan = calculateDistance(positions);
                 NavigationService.Navigate(new Uri("/WorkoutSavePage.xaml", UriKind.RelativeOrAbsolute));
             }
