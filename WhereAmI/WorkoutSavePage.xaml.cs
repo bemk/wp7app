@@ -75,6 +75,7 @@ namespace WhereAmI
            workout.routeCoordinates = routeCoordinates;
            workout.distanceRan = MainPage.totalDistanceRan;
            workout.routeLine = mapPL;
+           workout.route = route;
            MainPage.mainDatabase.addWorkoutToDatabase(workout);
            NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.RelativeOrAbsolute));
 

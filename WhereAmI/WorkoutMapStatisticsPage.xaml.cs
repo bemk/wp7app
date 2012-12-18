@@ -74,9 +74,9 @@ namespace WhereAmI
            // List<GeoCoordinate> points = from point in selectedWorkout.routeLine.Locations select new GeoCoordinate(point.lat, point.lng);
             //List<GeoCoordinate> a = selectedWorkout.routeCoordinates;
             //double latitude2 = from GeoCoordinate geoCor in selectedWorkout.routeCoordinates.First() select geoCor.Latitude;
-            GeoCoordinate abb = selectedWorkout.routeCoordinates.First();
-            latitude = abb.Latitude;
-            longitude = abb.Longitude;
+            Tuple<GeoCoordinate, DateTime> a = selectedWorkout.route.First();
+            latitude = a.item1.Latitude;
+            longitude = a.item1.Longitude;
 
            // selectedWorkout.routeCoordinates.First() 
 

@@ -24,6 +24,7 @@ namespace WhereAmI
         public double distanceRan { get; set; }
         public string workoutDuration { get; set; }
         public List<GeoCoordinate> routeCoordinates { get; set; }
+        public List<Tuple<GeoCoordinate, DateTime>> route { get; set; }
 
         public MapPolyline routeLine = new MapPolyline();
 
