@@ -129,7 +129,7 @@ namespace WhereAmI
                 geoWatcherCheck = false;
                 WorkoutSavePage.setWorkoutRoute(joggingPolyLine);
                 StopTimer();
-                WorkoutSavePage.setValues(startTime.ToString(), elapsedTime.ToString(),routeCoordinates);
+                WorkoutSavePage.setValues(startTime.ToString(), elapsedTime.ToString(), positions);
                 totalDistanceRan = calculateDistance(positions);
                 NavigationService.Navigate(new Uri("/WorkoutSavePage.xaml", UriKind.RelativeOrAbsolute));
             }
@@ -207,7 +207,7 @@ namespace WhereAmI
         {
             Tuple<GeoCoordinate, DateTime>prev = null;
             double result = 0;
-            foreach (Tuple<GeoCoordinate, DateTime> t in l)
+            foreach (Tuple<GeoCoordinate, DateTime> t in l) // <= LINQ query!!!
             {
                 if (prev != null)
                 {
