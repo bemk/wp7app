@@ -28,10 +28,12 @@
             <TextBlock Height="63" HorizontalAlignment="Left" Margin="59,660,0,0" Name="myPositionText" Text="GPS Coordinates" VerticalAlignment="Top" Width="337" />
             <Button Content="Locate Me" Height="72" HorizontalAlignment="Left" Margin="253,582,0,0" Name="myPositionButton" VerticalAlignment="Top" Width="201" Click="locateMeButton_Click" DataContext="{Binding}" />
             <my:Map Height="520" HorizontalAlignment="Left" Name="map1" VerticalAlignment="Top" Width="462" CredentialsProvider="ApAcGR3lHuEM4Up7Kz3qnndrI9IHNRuk13_WzB9TiF9rtl3SinYDMQ2Yr0mIF0fV" Margin="-3,0,0,0" />
-            <Button Content="Start" Height="66" HorizontalAlignment="Left" Margin="29,518,0,0" Name="button1" VerticalAlignment="Top" Width="157" Click="startButton_Click" />
-            <Button Content="EndWorkout" Height="67" HorizontalAlignment="Left" Margin="215,517,0,0" Name="button2" VerticalAlignment="Top" Width="208" Click="endWorkoutButton_Click" />
-            <Button Content="Display Workouts" Height="73" HorizontalAlignment="Left" Margin="12,581,0,0" Name="button3" VerticalAlignment="Top" Width="251" Click="displayPreviousWorkoutButton_Click" />
+            <Button Content="Start" Height="72" HorizontalAlignment="Right" Margin="0,516,193,0" Name="button1" VerticalAlignment="Top" Width="257" Click="startButton_Click" />
+            <Button Content="EndWorkout" Height="72" HorizontalAlignment="Left" Margin="253,516,0,0" Name="button2" VerticalAlignment="Top" Width="201" Click="endWorkoutButton_Click" Visibility="Collapsed" />
+            <Button Content="Display Workouts" Height="72" HorizontalAlignment="Left" Margin="6,582,0,0" Name="button3" VerticalAlignment="Top" Width="257" Click="displayPreviousWorkoutButton_Click" />
             <TextBlock Height="61" HorizontalAlignment="Left" Margin="94,453,0,0" Name="timerBlock" Text="00:00:00:00" VerticalAlignment="Top" Width="266" Foreground="Black" OpacityMask="{x:Null}" FontSize="45" TextAlignment="Center" FontWeight="Bold" FontFamily="Segoe WP" />
+            <Button Content="+" Height="72" HorizontalAlignment="Left" Margin="140,375,0,0" Name="button4" VerticalAlignment="Top" Width="86" Click="button4_Click" BorderBrush="Black" Foreground="Black" FontWeight="Normal" />
+            <Button Content="-" Height="72" HorizontalAlignment="Right" Margin="0,375,143,0" Name="button5" VerticalAlignment="Top" Width="81" Click="button5_Click" Foreground="Black" BorderBrush="Black" />
         </Grid>
         
         <!--Andy Added PushpinPanel -->

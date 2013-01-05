@@ -1,5 +1,4 @@
-﻿//Last ONE!!
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -21,12 +20,15 @@ using System.Data.Linq.Mapping;
 using System.ComponentModel;
 using System.Collections.ObjectModel;
 using System.Threading;
+using System.IO;
+using System.Runtime.Serialization;
+using System.IO.IsolatedStorage;
 
 namespace WhereAmI
 {
     public partial class MainPage : PhoneApplicationPage
     {
-        public IGeoPositionWatcher<GeoCoordinate> geowatcher;                                               // necessary variable for jogging simulation
+        public IGeoPositionWatcher<GeoCoordinate> geowatcher;                                               
         public bool AerialMode = false;
         public List<Tuple<GeoCoordinate, DateTime>> positions = new List<Tuple<GeoCoordinate, DateTime>>(); // store all GPS coordinates along with timestamps on each GPS registered coordinate
         public List<GeoCoordinate> routeCoordinates = new List<GeoCoordinate>();
@@ -34,7 +36,7 @@ namespace WhereAmI
         public double hourS, minS, secS, milliS = 0;
         public bool geoWatcherCheck = false;
         public PreviousWorkoutListPage previousWorkoutListPage = new PreviousWorkoutListPage();
-        public static WorkoutDatabase mainDatabase = new WorkoutDatabase();                                 // THE one and only Database to be used
+        public static WorkoutDatabase mainDatabase = new WorkoutDatabase();                             // THE one and only Database to be used
         protected bool started = false;
         protected bool lap = false;
         protected DispatcherTimer timer = null;
@@ -43,12 +45,14 @@ namespace WhereAmI
         protected TimeSpan elapsedTime;
         protected TimeSpan lapTime;
         public static double totalDistanceRan = 0;
-        public string workoutDuration; 
- 
+        public string workoutDuration;
+        public static DataSaver<WorkoutDatabase> dataSave = new DataSaver<WorkoutDatabase>();
+
         public static WorkoutDatabase getDatabase()
         {
             return mainDatabase;
         }
+
         public MainPage()
         {
             InitializeComponent();
@@ -59,20 +63,25 @@ namespace WhereAmI
             joggingPolyLine.Locations = new LocationCollection();
             map1.Children.Add(joggingPolyLine);
             string deviceName = Microsoft.Phone.Info.DeviceExtendedProperties.GetValue("DeviceName").ToString();
-
+            
             if (deviceName == "XDeviceEmulator")                                                                    // Checks for device name in order to determine whether to simulate a jogger or not
             {
-                geowatcher = new GeoCoordinateSimulator(34.0568, -117.195);                                         // Test coordinates when running the simulator
+               geowatcher = new GeoCoordinateSimulator(51.5941116666667, 4.77941666666667);                         // Test coordinates when running the simulator
+              
             }
             else
             {
                 geowatcher = new GeoCoordinateWatcher(GeoPositionAccuracy.High);
             }
             geowatcher.PositionChanged += watcher_PositionChanged;
+            //The next line is responsible for loading the database from Isolated Storage. The loading and saving implementation works HOWEVER, It is NOT loaded properly and the previous workoutlist does not display previously saved workouts.
+           // mainDatabase = dataSave.loadDatabaseFromIsolatedStorage("WorkoutDatabase");                                                 
+            System.Diagnostics.Debug.WriteLine("Database loaded from Isolated Storage");
+            checkIfFileExists();
         }
 
         // This method is called everytime the GPS position is changed
-        void watcher_PositionChanged(object sender, GeoPositionChangedEventArgs<GeoCoordinate> e)
+        private void watcher_PositionChanged(object sender, GeoPositionChangedEventArgs<GeoCoordinate> e)
         {
             myPositionText.Text = "Latitude: " + e.Position.Location.Latitude + "\n Longitude: " + e.Position.Location.Longitude;
             GeoCoordinate g = new GeoCoordinate(e.Position.Location.Latitude, e.Position.Location.Longitude);
@@ -91,10 +100,9 @@ namespace WhereAmI
             System.Diagnostics.Debug.WriteLine(totalDistanceRan.ToString());
         }
 
-        void GeoPositionChanged(GeoPositionChangedEventArgs<GeoCoordinate> e)
+        private void GeoPositionChanged(GeoPositionChangedEventArgs<GeoCoordinate> e)
         {
         }
-
 
         private void SwitchViewButton_Click(object sender, RoutedEventArgs e)
         {
@@ -123,21 +131,29 @@ namespace WhereAmI
 
         private void endWorkoutButton_Click(object sender, RoutedEventArgs e)
         {
-            if (geoWatcherCheck == true)
+             
+            MessageBoxResult m = MessageBox.Show("Are you sure you want to end your workout?","End Workout" , MessageBoxButton.OKCancel);
+            if (m == MessageBoxResult.OK)
             {
-                geowatcher.Stop();
-                geoWatcherCheck = false;
-                WorkoutSavePage.setWorkoutRoute(joggingPolyLine);
-                StopTimer();
-                WorkoutSavePage.setValues(startTime.ToString(), elapsedTime.ToString(), positions);
-                totalDistanceRan = calculateDistance(positions);
-                NavigationService.Navigate(new Uri("/WorkoutSavePage.xaml", UriKind.RelativeOrAbsolute));
+              if (geoWatcherCheck == true)
+                {
+                    geowatcher.Stop();
+                    geoWatcherCheck = false;
+                    WorkoutSavePage.setWorkoutRoute(joggingPolyLine);
+                    StopTimer();
+                    WorkoutSavePage.setValues(startTime.ToString(), elapsedTime.ToString(), positions);
+                    totalDistanceRan = calculateDistance(positions);
+                    NavigationService.Navigate(new Uri("/WorkoutSavePage.xaml", UriKind.RelativeOrAbsolute));
+                }
+              else {/* Don't do anything please */};
             }
+
             else { /*Do nothing please */}
         }
 
         private void startButton_Click(object sender, RoutedEventArgs e)
         {
+            button2.Visibility = Visibility.Visible;
             if (geoWatcherCheck == false)
             {
                 System.Diagnostics.Debug.WriteLine(DateTime.Now);
@@ -149,9 +165,10 @@ namespace WhereAmI
             else { /*Do nothing please */}
         }
 
-
         private void displayPreviousWorkoutButton_Click(object sender, RoutedEventArgs e)
         {
+            mainDatabase = dataSave.loadDatabaseFromIsolatedStorage("WorkoutDatabase");
+            mainDatabase.returnAmountOfWorkoutsInDatabase();
             NavigationService.Navigate(new Uri("/PreviousWorkoutListPage.xaml", UriKind.RelativeOrAbsolute));
         }
 
@@ -218,7 +235,40 @@ namespace WhereAmI
             return result/1000;                                                     // return distance in Kilometers
         }
 
+        private void button4_Click(object sender, RoutedEventArgs e)
+        {
+            if (map1.ZoomLevel == 16)
+            {
+                map1.ZoomLevel = 16;
+            }
+            else
+            {
+                map1.ZoomLevel += 1;
+            }
+        }
 
+        private void button5_Click(object sender, RoutedEventArgs e)
+        {
+            if (map1.ZoomLevel == 0)
+            {
+                map1.ZoomLevel = 0;
+            }
+            else
+            {
+                map1.ZoomLevel -= 1;
+            }
+        }
+
+        private void checkIfFileExists()
+        {
+
+            var rs = Application.GetResourceStream(new Uri("ApplicationIcon.png", UriKind.Relative));
+            StreamReader sr = new StreamReader(rs.Stream);
+            string a = sr.ReadToEnd();
+            System.Diagnostics.Debug.WriteLine("What is this: " + a);
+        }
+
+        
     }
 
 }

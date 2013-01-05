@@ -25,21 +25,6 @@ C:\Users\Andrew Servania\Desktop\TI Periode 2.2\IPR Windows Phone .Net Project 6
 C:\Users\Andrew Servania\Desktop\TI Periode 2.2\IPR Windows Phone .Net Project 6 EC\GPS Science\WhereAmI\WhereAmI\obj\Debug\WhereAmI.dll
 C:\Users\Andrew Servania\Desktop\TI Periode 2.2\IPR Windows Phone .Net Project 6 EC\GPS Science\WhereAmI\WhereAmI\obj\Debug\WhereAmI.pdb
 C:\Users\Andrew Servania\Desktop\TI Periode 2.2\IPR Windows Phone .Net Project 6 EC\GPS Science\WhereAmI\WhereAmI\obj\Debug\XapCacheFile.xml
-C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\ApplicationIcon.png
-C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\Background.png
-C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\WhereAmI.dll
-C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\WhereAmI.pdb
-C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\AppManifest.xaml
-C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\WhereAmI.xap
-C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\Microsoft.Phone.Controls.Maps.dll
-C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\Microsoft.Phone.Controls.Maps.xml
-C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\App.g.i.cs
-C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\MainPage.g.i.cs
-C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\WhereAmI.g.resources
-C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\WhereAmI.dll
-C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\WhereAmI.pdb
-C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\XapCacheFile.xml
-C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\WorkoutSavePage.g.i.cs
 C:\Users\Andrew Servania\Desktop\TI Periode 2.2\IPR Windows Phone .Net Project 6 EC\ANDY PROJECT BACKUP\Backup 2\WhereAmI\Bin\Debug\ApplicationIcon.png
 C:\Users\Andrew Servania\Desktop\TI Periode 2.2\IPR Windows Phone .Net Project 6 EC\ANDY PROJECT BACKUP\Backup 2\WhereAmI\Bin\Debug\Background.png
 C:\Users\Andrew Servania\Desktop\TI Periode 2.2\IPR Windows Phone .Net Project 6 EC\ANDY PROJECT BACKUP\Backup 2\WhereAmI\Bin\Debug\WhereAmI.dll
@@ -115,3 +100,56 @@ C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\obj\Debug\PreviousWorkoutListPa
 C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\obj\Debug\WorkoutMapStatisticsPage.g.i.cs
 C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\obj\Debug\WorkoutSavePage.g.i.cs
 C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\obj\Debug\WhereAmI.g.resources
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\App.g.i.cs
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\MainPage.g.i.cs
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\PreviousWorkoutListPage.g.i.cs
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\WorkoutMapStatisticsPage.g.i.cs
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\WorkoutSavePage.g.i.cs
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\WhereAmI.g.resources
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\ApplicationIcon.png
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\Background.png
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\WhereAmI.dll
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\WhereAmI.pdb
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\AppManifest.xaml
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\WhereAmI.xap
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\Microsoft.Phone.Controls.Maps.dll
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTesting.Silverlight.dll
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Reactive.dll
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Windows.Controls.Data.DataForm.Toolkit.dll
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Windows.Controls.Data.Toolkit.dll
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Windows.Controls.dll
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Windows.Controls.Input.Toolkit.dll
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Windows.Controls.Layout.Toolkit.dll
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Windows.Controls.Theming.Toolkit.dll
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Windows.Controls.Toolkit.dll
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\Microsoft.Phone.Controls.Maps.xml
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTesting.Silverlight.pdb
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTesting.Silverlight.xml
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Windows.Controls.xml
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Windows.Controls.Data.DataForm.Toolkit.pdb
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Windows.Controls.Data.DataForm.Toolkit.xml
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Windows.Controls.Data.Toolkit.pdb
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Windows.Controls.Data.Toolkit.xml
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.pdb
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.xml
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Windows.Controls.Input.Toolkit.pdb
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Windows.Controls.Input.Toolkit.xml
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Windows.Controls.Layout.Toolkit.pdb
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Windows.Controls.Layout.Toolkit.xml
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Windows.Controls.Theming.Toolkit.pdb
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Windows.Controls.Theming.Toolkit.xml
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Windows.Controls.Toolkit.pdb
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Windows.Controls.Toolkit.xml
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\de\System.Windows.Controls.resources.dll
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\es\System.Windows.Controls.resources.dll
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\fr\System.Windows.Controls.resources.dll
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\it\System.Windows.Controls.resources.dll
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\ja\System.Windows.Controls.resources.dll
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\ko\System.Windows.Controls.resources.dll
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\zh-Hans\System.Windows.Controls.resources.dll
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\zh-Hant\System.Windows.Controls.resources.dll
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\WhereAmI.dll
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\WhereAmI.pdb
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\XapCacheFile.xml
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\WhereAmI.csprojResolveAssemblyReference.cache

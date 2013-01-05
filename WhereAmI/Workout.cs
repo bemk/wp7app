@@ -12,11 +12,11 @@ using Microsoft.Phone.Controls.Maps;
 using System.Device.Location;
 using System.Collections.Generic;
 using System.Data.Linq.Mapping;
+using System.Runtime.Serialization;
 
 
 namespace WhereAmI
 {
-    [Table]
     public class Workout
     {
         public string workoutName { get; set; }
@@ -25,8 +25,8 @@ namespace WhereAmI
         public string workoutDuration { get; set; }
         public List<GeoCoordinate> routeCoordinates { get; set; }
         public List<Tuple<GeoCoordinate, DateTime>> route { get; set; }
-
         public MapPolyline routeLine = new MapPolyline();
+        public static LocationCollection Locations { get; set; }
 
         public Workout()
         {
@@ -38,7 +38,6 @@ namespace WhereAmI
             return workoutName;
         }
 
-        //need this!:
-        public static LocationCollection Locations { get; set; }
+
     }
 }

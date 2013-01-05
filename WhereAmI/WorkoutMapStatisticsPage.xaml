@@ -36,6 +36,8 @@
             <TextBlock Height="30" HorizontalAlignment="Left" Margin="191,488,0,0" Name="textBlock6" Text="Blah..." VerticalAlignment="Top" Width="235" />
             <TextBlock Height="30" Margin="191,541,30,0" Name="textBlock7" Text="Blah..." VerticalAlignment="Top" />
             <TextBlock Height="30" HorizontalAlignment="Left" Margin="191,595,0,0" Name="textBlock8" Text="Blah..." VerticalAlignment="Top" Width="235" />
+            <Button Content="+" Height="71" HorizontalAlignment="Left" Margin="142,285,0,0" Name="button1" VerticalAlignment="Top" Width="75" BorderBrush="Black" Foreground="Black" Click="button1_Click" />
+            <Button Content="-" Height="71" HorizontalAlignment="Left" Margin="242,285,0,0" Name="button2" VerticalAlignment="Top" Width="75" BorderBrush="Black" Foreground="Black" Click="button2_Click" />
         </Grid>
     </Grid>
  

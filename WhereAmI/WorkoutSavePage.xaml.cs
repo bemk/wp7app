@@ -18,13 +18,11 @@ namespace WhereAmI
 {
     public partial class WorkoutSavePage : PhoneApplicationPage
     {
-        public static MainPage mainPage = new MainPage();
         private static MapPolyline mapPL = new MapPolyline();
         private static List<GeoCoordinate> routeCoordinates = new List<GeoCoordinate>();
         private static string elapsedTime;
         private static string workoutDuration;
         private static List<Tuple<GeoCoordinate, DateTime>> route;
-
 
         public WorkoutSavePage()
         {
@@ -43,7 +41,6 @@ namespace WhereAmI
 
         private void workoutNameTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-           // workoutNameTextBox.Text = "Route1";
         }
 
         private void textBox2_TextChanged(object sender, TextChangedEventArgs e)
@@ -70,15 +67,16 @@ namespace WhereAmI
            workout.workoutName = workoutNameTextBox.Text;
            workout.startTime = DateTime.Now.ToString();
            workout.workoutDuration = workoutDuration;
-          // workout.distanceRunned = Convert.ToDouble(kilometersTextBox.Text);
-           //workout     workoutTimeTextBox
            workout.routeCoordinates = routeCoordinates;
            workout.distanceRan = MainPage.totalDistanceRan;
            workout.routeLine = mapPL;
            workout.route = route;
-           MainPage.mainDatabase.addWorkoutToDatabase(workout);
-           NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.RelativeOrAbsolute));
 
+            // I suspect that the possible culprit to our loading and saving of the database object lies here, in the next two lines(but I'm not sure):
+           MainPage.mainDatabase.addWorkoutToDatabase(workout);
+           MainPage.dataSave.saveDatabaseToIsolatedStorage(MainPage.mainDatabase, "WorkoutDatabase");
+
+           NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.RelativeOrAbsolute));
         }
 
         public static void setWorkoutRoute(MapPolyline mpl)
