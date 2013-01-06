@@ -25,12 +25,21 @@ namespace WhereAmI
             InitializeComponent();
 
             foreach (double kmPerHour in selectedWorkout.kmPerHour)
-            {
+            {//By the way: x Axis seconds and the y Axis indicates KM/H
                 valuesCollection.Add(new Point(second++, kmPerHour));
-            }
-            
-           
+            }  
             this.MyLineSeriesChart.DataContext = valuesCollection;
+      
+        }
+
+        private void LineChart_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
 
     }
