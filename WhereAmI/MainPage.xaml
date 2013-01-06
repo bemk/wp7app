@@ -31,7 +31,7 @@
             <Button Content="Start" Height="72" HorizontalAlignment="Right" Margin="0,516,193,0" Name="button1" VerticalAlignment="Top" Width="257" Click="startButton_Click" />
             <Button Content="EndWorkout" Height="72" HorizontalAlignment="Left" Margin="253,516,0,0" Name="button2" VerticalAlignment="Top" Width="201" Click="endWorkoutButton_Click" Visibility="Collapsed" />
             <Button Content="Display Workouts" Height="72" HorizontalAlignment="Left" Margin="6,582,0,0" Name="button3" VerticalAlignment="Top" Width="257" Click="displayPreviousWorkoutButton_Click" />
-            <TextBlock Height="61" HorizontalAlignment="Left" Margin="94,453,0,0" Name="timerBlock" Text="00:00:00:00" VerticalAlignment="Top" Width="266" Foreground="Black" OpacityMask="{x:Null}" FontSize="45" TextAlignment="Center" FontWeight="Bold" FontFamily="Segoe WP" />
+            <TextBlock Height="61" HorizontalAlignment="Left" Margin="94,453,0,0" Name="timerBlock" Text="00:00:00.0" VerticalAlignment="Top" Width="266" Foreground="Black" OpacityMask="{x:Null}" FontSize="45" TextAlignment="Center" FontWeight="Bold" FontFamily="Segoe WP" />
             <Button Content="+" Height="72" HorizontalAlignment="Left" Margin="140,375,0,0" Name="button4" VerticalAlignment="Top" Width="86" Click="button4_Click" BorderBrush="Black" Foreground="Black" FontWeight="Normal" />
             <Button Content="-" Height="72" HorizontalAlignment="Right" Margin="0,375,143,0" Name="button5" VerticalAlignment="Top" Width="81" Click="button5_Click" Foreground="Black" BorderBrush="Black" />
         </Grid>

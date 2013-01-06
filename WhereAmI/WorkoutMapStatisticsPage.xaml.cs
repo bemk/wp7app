@@ -32,8 +32,11 @@ namespace WhereAmI
             map2.Children.Add(routeLine);
             textBlock5.Text = selectedWorkout.workoutName;
             textBlock6.Text = selectedWorkout.startTime;
-            textBlock7.Text = selectedWorkout.distanceRan.ToString();
-            textBlock8.Text = selectedWorkout.workoutDuration;
+            textBlock7.Text = String.Format("{0:F2}", selectedWorkout.distanceRan);
+            textBlock8.Text = string.Format("{0:00}:{1:00}:{2:00}",
+               selectedWorkout.elapsedTimeTS.Hours,
+                selectedWorkout.elapsedTimeTS.Minutes,
+                selectedWorkout.elapsedTimeTS.Seconds); ;
             
             double latitude;
             double longitude;

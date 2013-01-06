@@ -25,12 +25,20 @@ namespace WhereAmI
         private static List<Tuple<GeoCoordinate, DateTime>> route;
         public static Workout workout { get; set; }
 
-        public WorkoutSavePage()
+        private static DateTime startTime;
+        private static TimeSpan elapsedTimeTS ;
+
+        public WorkoutSavePage() 
         {
+            
             InitializeComponent();
-            textBlock5.Text = elapsedTime;
-            textBlock6.Text = MainPage.totalDistanceRan.ToString();
-            textBlock7.Text  = workoutDuration;
+            //elapsedTimeTS;
+            textBlock5.Text = startTime.ToString();
+            textBlock6.Text = String.Format("{0:F2}", MainPage.totalDistanceRan);
+            textBlock7.Text = string.Format("{0:00}:{1:00}:{2:00}",
+                elapsedTimeTS.Hours,
+                elapsedTimeTS.Minutes,
+                elapsedTimeTS.Seconds) ;
         }
 
         public static void setValues(string currentElapsedTime, string currentWorkoutDuration, List<Tuple<GeoCoordinate, DateTime>> r)
@@ -71,9 +79,12 @@ namespace WhereAmI
            workout.routeCoordinates = routeCoordinates;
            workout.distanceRan = MainPage.totalDistanceRan;
            workout.routeLine = mapPL;
+           workout.elapsedTimeTS = elapsedTimeTS;
            workout.route = route;
 
             // I suspect that the possible culprit to our loading and saving of the database object lies here, in the next two lines(but I'm not sure):
+           
+
            MainPage.mainDatabase.addWorkoutToDatabase(workout);
            MainPage.dataSave.saveDatabaseToIsolatedStorage(MainPage.mainDatabase, "WorkoutDatabase");
 
@@ -109,6 +120,12 @@ namespace WhereAmI
                      select new Tuple<GeoCoordinate, DateTime>(new GeoCoordinate((double)r.Element("Waypoint").Attribute("long"), (double)r.Element("Waypoint").Attribute("lat")),new DateTime((long)r.Element("Waypoint").Attribute("stamp")));
             foreach (var i in l)
                 System.Diagnostics.Debug.WriteLine(i);
+        }
+
+        internal static void setTimesValues(DateTime currentStartTime, TimeSpan currentElapsedTime)
+        {
+            startTime = currentStartTime;
+            elapsedTimeTS = currentElapsedTime;
         }
     }
 }

@@ -18,19 +18,30 @@ using System.Collections.ObjectModel;
 
 namespace WhereAmI
 {
+    [DataContract]
     public class Workout
     {
+        [DataMember]
         public string workoutName { get; set; }
+        [DataMember]
         public string startTime { get; set; }
+        [DataMember]
         public double distanceRan { get; set; }
+        [DataMember]
         public string workoutDuration { get; set; }
+        [DataMember]
         public List<GeoCoordinate> routeCoordinates { get; set; }
+        [DataMember]
         public List<Tuple<GeoCoordinate, DateTime>> route { get; set; }
+        [DataMember]
         public MapPolyline routeLine = new MapPolyline();
+        [DataMember]
         public static LocationCollection Locations { get; set; }
-
+        [DataMember]
         public ObservableCollection<double> kmPerHour = new ObservableCollection<double>();
-      
+        [DataMember]
+        public TimeSpan elapsedTimeTS { get; set; }
+     // [DataMember]
 
         public Workout()
         {

@@ -32,7 +32,10 @@ namespace WhereAmI
 
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {
-            listBox1.ItemsSource = MainPage.dataSave.loadDatabaseFromIsolatedStorage("WorkoutDatabase").getDatabase();
+         //   if (MainPage.dataSave.getIsolatedStorageFile() != null)
+        //    {
+                listBox1.ItemsSource = MainPage.dataSave.loadDatabaseFromIsolatedStorage("WorkoutDatabase").getDatabase();
+         //   }
             System.Diagnostics.Debug.WriteLine("db & listbox updated");
         }
     }

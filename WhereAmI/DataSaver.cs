@@ -50,21 +50,26 @@ namespace WhereAmI
             catch (Exception e)
             {
              // isoFile1.DeleteFile(TargetFileName);
-
+                throw e;
             }
             System.Diagnostics.Debug.WriteLine("Available Free Space in Isolated Storage:" + isoFile1.AvailableFreeSpace);
         }
 
+        internal IsolatedStorageFile getIsolatedStorageFile()
+        {
+            return isoFile1;
+        }
         public WorkoutDatabase loadDatabaseFromIsolatedStorage(string fileName)
         {
             WorkoutDatabase retrievedDatabase = default(WorkoutDatabase);
             string TargetFileName = String.Format("{0}/{1}.dat",TargetFolderName, fileName);
-            if (isoFile1.FileExists(TargetFileName))
+            if (isoFile1.FileExists(TargetFileName) && isoFile1 !=null)
+            {
                 using (var sourceStream = isoFile1.OpenFile(TargetFileName, FileMode.Open))
                 {
                     retrievedDatabase = (WorkoutDatabase)dataSerializer.ReadObject(sourceStream);
                 }
-
+            }
             return retrievedDatabase;
         }
 
