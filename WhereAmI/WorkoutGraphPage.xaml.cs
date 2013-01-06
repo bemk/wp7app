@@ -11,6 +11,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using System.Collections.ObjectModel;
+using System.Windows.Threading;
 
 namespace WhereAmI
 {
@@ -18,18 +19,18 @@ namespace WhereAmI
     {
         PointCollection valuesCollection = new PointCollection();
         double second = 0.0;
+        private DispatcherTimer timer;
         public static Workout selectedWorkout { get; set; }
-
+        public static int tickCounter = 0;
+        public static int tickCounter2 = 0;
         public WorkoutGraphPage()
         {
             InitializeComponent();
-
             foreach (double kmPerHour in selectedWorkout.kmPerHour)
             {//By the way: x Axis seconds and the y Axis indicates KM/H
-                valuesCollection.Add(new Point(second++, kmPerHour));
-            }  
-            this.MyLineSeriesChart.DataContext = valuesCollection;
-      
+                this.valuesCollection.Add(new Point(second++, kmPerHour));
+                this.MyLineSeriesChart.DataContext = this.valuesCollection;
+            }
         }
 
         private void LineChart_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -41,6 +42,5 @@ namespace WhereAmI
         {
 
         }
-
     }
 }
