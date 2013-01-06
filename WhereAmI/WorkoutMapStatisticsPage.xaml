@@ -28,16 +28,17 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <my:Map Height="364" HorizontalAlignment="Left" Margin="2,5,0,0" Name="map2" VerticalAlignment="Top" Width="450" CredentialsProvider="ApAcGR3lHuEM4Up7Kz3qnndrI9IHNRuk13_WzB9TiF9rtl3SinYDMQ2Yr0mIF0fV" />
-            <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,435,0,0" Name="textBlock1" Text="Workout Name" VerticalAlignment="Top" Width="143" />
-            <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,488,0,0" Name="textBlock2" Text="Date &amp; Time" VerticalAlignment="Top" Width="143" />
-            <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,541,0,0" Name="textBlock3" Text="Kilometers" VerticalAlignment="Top" Width="143" />
-            <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,595,0,0" Name="textBlock4" Text="Workout Duration" VerticalAlignment="Top" Width="161" />
-            <TextBlock Height="30" HorizontalAlignment="Left" Margin="191,435,0,0" Name="textBlock5" Text="Blah..." VerticalAlignment="Top" Width="235" />
-            <TextBlock Height="30" HorizontalAlignment="Left" Margin="191,488,0,0" Name="textBlock6" Text="Blah..." VerticalAlignment="Top" Width="235" />
-            <TextBlock Height="30" Margin="191,541,30,0" Name="textBlock7" Text="Blah..." VerticalAlignment="Top" />
-            <TextBlock Height="30" HorizontalAlignment="Left" Margin="191,595,0,0" Name="textBlock8" Text="Blah..." VerticalAlignment="Top" Width="235" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,395,0,0" Name="textBlock1" Text="Workout Name" VerticalAlignment="Top" Width="143" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,448,0,0" Name="textBlock2" Text="Date &amp; Time" VerticalAlignment="Top" Width="143" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,501,0,0" Name="textBlock3" Text="Kilometers" VerticalAlignment="Top" Width="143" />
+            <TextBlock Height="30" Margin="12,555,283,0" Name="textBlock4" Text="Workout Duration" VerticalAlignment="Top" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="191,395,0,0" Name="textBlock5" Text="Blah..." VerticalAlignment="Top" Width="235" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="191,448,0,0" Name="textBlock6" Text="Blah..." VerticalAlignment="Top" Width="235" />
+            <TextBlock Height="30" Margin="191,501,30,0" Name="textBlock7" Text="Blah..." VerticalAlignment="Top" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="191,555,0,0" Name="textBlock8" Text="Blah..." VerticalAlignment="Top" Width="235" />
             <Button Content="+" Height="71" HorizontalAlignment="Left" Margin="142,285,0,0" Name="button1" VerticalAlignment="Top" Width="75" BorderBrush="Black" Foreground="Black" Click="button1_Click" />
             <Button Content="-" Height="71" HorizontalAlignment="Left" Margin="242,285,0,0" Name="button2" VerticalAlignment="Top" Width="75" BorderBrush="Black" Foreground="Black" Click="button2_Click" />
+            <Button Content="Show Workout Graph" Height="80" HorizontalAlignment="Left" Margin="50,591,0,0" Name="button3" VerticalAlignment="Top" Width="347" Click="button3_Click" />
         </Grid>
     </Grid>
  

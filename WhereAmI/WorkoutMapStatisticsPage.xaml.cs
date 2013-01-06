@@ -79,5 +79,12 @@ namespace WhereAmI
             }
         }
 
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+           // WorkoutGraphPage.setWorkout(selectedWorkout);
+            WorkoutGraphPage.selectedWorkout = selectedWorkout;
+            NavigationService.Navigate(new Uri("/WorkoutGraphPage.xaml",UriKind.Relative));
+        }
+
     }
 }

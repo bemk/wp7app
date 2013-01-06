@@ -13,6 +13,7 @@ using System.Device.Location;
 using System.Collections.Generic;
 using System.Data.Linq.Mapping;
 using System.Runtime.Serialization;
+using System.Collections.ObjectModel;
 
 
 namespace WhereAmI
@@ -28,6 +29,9 @@ namespace WhereAmI
         public MapPolyline routeLine = new MapPolyline();
         public static LocationCollection Locations { get; set; }
 
+        public ObservableCollection<double> kmPerHour = new ObservableCollection<double>();
+      
+
         public Workout()
         {
             routeLine.Locations = new LocationCollection();
@@ -38,6 +42,9 @@ namespace WhereAmI
             return workoutName;
         }
 
-
+        internal void addKMpHtoKMpHcollection(double kilometersPerHour)
+        {
+            kmPerHour.Add(kilometersPerHour);
+        }
     }
 }

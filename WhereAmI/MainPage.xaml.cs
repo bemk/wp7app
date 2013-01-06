@@ -40,6 +40,7 @@ namespace WhereAmI
         protected bool started = false;
         protected bool lap = false;
         protected DispatcherTimer timer = null;
+        protected DispatcherTimer speedLogTimer = null;
         protected DateTime startTime; 
         protected TimeSpan elapsed;
         protected TimeSpan elapsedTime;
@@ -47,7 +48,10 @@ namespace WhereAmI
         public static double totalDistanceRan = 0;
         public string workoutDuration;
         public static DataSaver<WorkoutDatabase> dataSave = new DataSaver<WorkoutDatabase>();
+        Workout newWorkout = new Workout();
+        double secondsCounter = 0;
 
+        GeoCoordinate lastGPSlocation = new GeoCoordinate();
         public static WorkoutDatabase getDatabase()
         {
             return mainDatabase;
@@ -56,6 +60,7 @@ namespace WhereAmI
         public MainPage()
         {
             InitializeComponent();
+            lastGPSlocation = null;
             joggingPolyLine = new MapPolyline();                         
             joggingPolyLine.Stroke = new SolidColorBrush(Colors.Blue);
             joggingPolyLine.StrokeThickness = 5;
@@ -97,6 +102,9 @@ namespace WhereAmI
             {
                 totalDistanceRan += g.GetDistanceTo(positions[positions.Count - 2].item1);
             }
+            newWorkout.addKMpHtoKMpHcollection(calculateKMperHour(lastGPSlocation, g));
+            
+
             System.Diagnostics.Debug.WriteLine(totalDistanceRan.ToString());
         }
 
@@ -143,6 +151,7 @@ namespace WhereAmI
                     StopTimer();
                     WorkoutSavePage.setValues(startTime.ToString(), elapsedTime.ToString(), positions);
                     totalDistanceRan = calculateDistance(positions);
+                    WorkoutSavePage.workout = newWorkout;
                     NavigationService.Navigate(new Uri("/WorkoutSavePage.xaml", UriKind.RelativeOrAbsolute));
                 }
               else {/* Don't do anything please */};
@@ -160,7 +169,7 @@ namespace WhereAmI
                 geowatcher.Start();
                 geoWatcherCheck = true;
                 StartTimer();
-                
+    
             }
             else { /*Do nothing please */}
         }
@@ -180,6 +189,7 @@ namespace WhereAmI
             timer.Start();
             startTime = DateTime.Now - elapsedTime;
         }
+
 
         protected void tick(object sender, EventArgs e)
         {
@@ -235,6 +245,25 @@ namespace WhereAmI
             return result/1000;                                                     // return distance in Kilometers
         }
 
+        public double calculateKMperHour(GeoCoordinate initialLocation, GeoCoordinate currentGPSlocation)
+        {
+            TimeSpan timeStamp = TimeSpan.Parse("00:00:01.00");
+            double kmPerHour = 0;
+            if (initialLocation != null)
+            {
+                double distance = initialLocation.GetDistanceTo(currentGPSlocation) / 1000;
+                kmPerHour = distance / timeStamp.TotalHours;
+            }
+
+            if (initialLocation == null)
+            {
+                this.lastGPSlocation = currentGPSlocation;
+                double distance = lastGPSlocation.GetDistanceTo(currentGPSlocation) / 1000;
+                kmPerHour = distance / timeStamp.TotalHours;             
+            }
+            this.lastGPSlocation = currentGPSlocation;
+            return kmPerHour;
+        }
         private void button4_Click(object sender, RoutedEventArgs e)
         {
             if (map1.ZoomLevel == 16)

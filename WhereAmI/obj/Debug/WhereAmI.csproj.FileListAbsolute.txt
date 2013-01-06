@@ -153,3 +153,4 @@ C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\WhereAmI.dll
 C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\WhereAmI.pdb
 C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\XapCacheFile.xml
 C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\WhereAmI.csprojResolveAssemblyReference.cache
+C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\WorkoutGraphPage.g.i.cs

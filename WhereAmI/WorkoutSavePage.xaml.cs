@@ -23,6 +23,7 @@ namespace WhereAmI
         private static string elapsedTime;
         private static string workoutDuration;
         private static List<Tuple<GeoCoordinate, DateTime>> route;
+        public static Workout workout { get; set; }
 
         public WorkoutSavePage()
         {
@@ -60,7 +61,7 @@ namespace WhereAmI
 
         private void saveWorkoutButton_Click(object sender, RoutedEventArgs e)
         {
-           Workout workout = new Workout();
+          
 
            saveRoute(route, workoutNameTextBox.Text);
 
