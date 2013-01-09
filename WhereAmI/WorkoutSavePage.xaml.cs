@@ -98,14 +98,15 @@ namespace WhereAmI
 
         public void saveRoute(List<Tuple<GeoCoordinate, DateTime>> route, string name)
         {
-            XElement r = new XElement("Route",
+            XElement r = new XElement("Routes",
+                new XElement("Route",
                     new XAttribute("name", name),
                     from l in route.ToArray()
                     orderby l.item2.Ticks
                     select new XElement("Waypoint",
                         new XAttribute("lat", l.item1.Latitude),
                         new XAttribute("long", l.item1.Longitude),
-                        new XAttribute("stamp", l.item2.Ticks)));
+                        new XAttribute("stamp", l.item2.Ticks))));
 
             System.Diagnostics.Debug.WriteLine(r);
 
@@ -115,7 +116,8 @@ namespace WhereAmI
 
         public void readRoute(XElement routes, string name)
         {
-            var result = routes.Elements("Waypoint").Select(wp => new Tuple<GeoCoordinate, DateTime>
+            var temp = routes.Elements("Route").Where(Route => Route.Attribute("name").Value.Equals(name)).Select(Route => new XElement(Route));
+            var result = temp.Elements("Waypoint").Select(wp => new Tuple<GeoCoordinate, DateTime>
                 (
                     new GeoCoordinate(
                         double.Parse(wp.Attribute("long").Value), 
