@@ -115,11 +115,16 @@ namespace WhereAmI
 
         public void readRoute(XElement routes, string name)
         {
-            var l = from r in routes.Elements("Route")
-                     where r.Attribute("name").Value == name
-                     select new Tuple<GeoCoordinate, DateTime>(new GeoCoordinate((double)r.Element("Waypoint").Attribute("long"), (double)r.Element("Waypoint").Attribute("lat")),new DateTime((long)r.Element("Waypoint").Attribute("stamp")));
-            foreach (var i in l)
-                System.Diagnostics.Debug.WriteLine(i);
+            var result = routes.Elements("Waypoint").Select(wp => new Tuple<GeoCoordinate, DateTime>
+                (
+                    new GeoCoordinate(
+                        double.Parse(wp.Attribute("long").Value), 
+                        double.Parse(wp.Attribute("lat").Value)),
+                    new DateTime(long.Parse(wp.Attribute("stamp").Value))
+                ));
+
+            foreach (var i in result)
+                System.Diagnostics.Debug.WriteLine(i.item1.ToString() + i.item2.ToString());
         }
 
         internal static void setTimesValues(DateTime currentStartTime, TimeSpan currentElapsedTime)
