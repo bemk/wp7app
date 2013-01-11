@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
+using System.Collections;
 
 namespace WhereAmI
 {
@@ -20,6 +21,7 @@ namespace WhereAmI
         public PreviousWorkoutListPage()
         {
             InitializeComponent();
+          
         }
 
         private void listBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -34,9 +36,12 @@ namespace WhereAmI
         {
          //   if (MainPage.dataSave.getIsolatedStorageFile() != null)
         //    {
-                listBox1.ItemsSource = MainPage.dataSave.loadDatabaseFromIsolatedStorage("WorkoutDatabase").getDatabase();
+            listBox1.ItemsSource = DataSaver<WorkoutDatabase>.loadDatabaseFromIsolatedStorage("WorkoutDatabase").getDatabase();
+             
          //   }
-            System.Diagnostics.Debug.WriteLine("db & listbox updated");
+        //    System.Diagnostics.Debug.WriteLine("db & listbox updated");
         }
+
+
     }
 }

@@ -19,7 +19,6 @@ namespace WhereAmI
     {
         PointCollection valuesCollection = new PointCollection();
         double second = 0.0;
-        private DispatcherTimer timer;
         public static Workout selectedWorkout { get; set; }
         public static int tickCounter = 0;
         public static int tickCounter2 = 0;

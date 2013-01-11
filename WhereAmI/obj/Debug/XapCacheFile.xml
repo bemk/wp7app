@@ -1,21 +1,13 @@
-﻿<xapCache source="C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\WhereAmI.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="06-Jan-13 8:33:07 PM">
-  <file source="C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="14-Dec-12 5:09:44 PM" />
-  <file source="C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Background.png" archivePath="Background.png" lastWriteTime="20-Nov-12 1:16:34 PM" />
-  <file source="C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="17-Dec-12 5:57:44 PM" />
-  <file source="C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\WhereAmI.dll" archivePath="WhereAmI.dll" lastWriteTime="06-Jan-13 8:33:06 PM" />
-  <file source="c:\Program Files (x86)\Microsoft SDKs\Windows Phone\v7.1\Libraries\Silverlight\Microsoft.Phone.Controls.Maps.dll" archivePath="Microsoft.Phone.Controls.Maps.dll" lastWriteTime="15-Sep-11 4:36:26 PM" />
-  <file source="C:\Program Files (x86)\Microsoft SDKs\Silverlight\v3.0\Toolkit\Nov09\Bin\Microsoft.VisualStudio.QualityTools.UnitTesting.Silverlight.dll" archivePath="Microsoft.VisualStudio.QualityTools.UnitTesting.Silverlight.dll" lastWriteTime="18-Nov-09 3:14:32 AM" />
-  <file source="C:\Program Files (x86)\Microsoft SDKs\Silverlight\v3.0\Toolkit\Nov09\Bin\System.Reactive.dll" archivePath="System.Reactive.dll" lastWriteTime="18-Nov-09 2:30:10 AM" />
-  <file source="C:\Program Files (x86)\Microsoft SDKs\Silverlight\v3.0\Toolkit\Nov09\Bin\System.Windows.Controls.Data.DataForm.Toolkit.dll" archivePath="System.Windows.Controls.Data.DataForm.Toolkit.dll" lastWriteTime="18-Nov-09 3:14:40 AM" />
-  <file source="C:\Program Files (x86)\Microsoft SDKs\Silverlight\v3.0\Toolkit\Nov09\Bin\System.Windows.Controls.Data.Toolkit.dll" archivePath="System.Windows.Controls.Data.Toolkit.dll" lastWriteTime="18-Nov-09 3:14:26 AM" />
-  <file source="C:\Program Files (x86)\Microsoft SDKs\Silverlight\v3.0\Toolkit\Nov09\Bin\System.Windows.Controls.DataVisualization.Toolkit.dll" archivePath="System.Windows.Controls.DataVisualization.Toolkit.dll" lastWriteTime="18-Nov-09 3:14:40 AM" />
-  <file source="C:\Program Files (x86)\Microsoft SDKs\Silverlight\v3.0\Libraries\Client\System.Windows.Controls.dll" archivePath="System.Windows.Controls.dll" lastWriteTime="17-Aug-09 11:35:44 PM" />
-  <file source="C:\Program Files (x86)\Microsoft SDKs\Silverlight\v3.0\Toolkit\Nov09\Bin\System.Windows.Controls.Input.Toolkit.dll" archivePath="System.Windows.Controls.Input.Toolkit.dll" lastWriteTime="18-Nov-09 3:14:38 AM" />
-  <file source="C:\Program Files (x86)\Microsoft SDKs\Silverlight\v3.0\Toolkit\Nov09\Bin\System.Windows.Controls.Layout.Toolkit.dll" archivePath="System.Windows.Controls.Layout.Toolkit.dll" lastWriteTime="18-Nov-09 3:14:38 AM" />
-  <file source="C:\Program Files (x86)\Microsoft SDKs\Silverlight\v3.0\Toolkit\Nov09\Bin\System.Windows.Controls.Theming.Toolkit.dll" archivePath="System.Windows.Controls.Theming.Toolkit.dll" lastWriteTime="18-Nov-09 3:14:52 AM" />
-  <file source="C:\Program Files (x86)\Microsoft SDKs\Silverlight\v3.0\Toolkit\Nov09\Bin\System.Windows.Controls.Toolkit.dll" archivePath="System.Windows.Controls.Toolkit.dll" lastWriteTime="18-Nov-09 3:14:52 AM" />
-  <file source="C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="20-Nov-12 1:16:34 PM" />
-  <file source="C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="04-Jan-13 10:33:46 PM" />
-  <file source="C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="17-Dec-12 5:57:44 PM" />
-  <file source="C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\Background.png" archivePath="Background.png" lastWriteTime="20-Nov-12 1:16:34 PM" />
+﻿<xapCache source="C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\WhereAmI.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="1/11/2013 1:15:58 PM">
+  <file source="C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="12/18/2012 1:02:05 AM" />
+  <file source="C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\Background.png" archivePath="Background.png" lastWriteTime="12/18/2012 12:57:04 AM" />
+  <file source="C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="12/18/2012 3:56:31 AM" />
+  <file source="C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\obj\Debug\WhereAmI.dll" archivePath="WhereAmI.dll" lastWriteTime="1/11/2013 1:15:55 PM" />
+  <file source="c:\Program Files\Microsoft SDKs\Windows Phone\v7.1\Libraries\Silverlight\Microsoft.Phone.Controls.Maps.dll" archivePath="Microsoft.Phone.Controls.Maps.dll" lastWriteTime="9/15/2011 4:36:26 PM" />
+  <file source="C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Reactive.dll" archivePath="System.Reactive.dll" lastWriteTime="11/18/2009 2:30:10 AM" />
+  <file source="C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll" archivePath="System.Windows.Controls.DataVisualization.Toolkit.dll" lastWriteTime="11/18/2009 3:14:40 AM" />
+  <file source="C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Windows.Controls.dll" archivePath="System.Windows.Controls.dll" lastWriteTime="8/17/2009 11:35:44 PM" />
+  <file source="C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Windows.Controls.Toolkit.dll" archivePath="System.Windows.Controls.Toolkit.dll" lastWriteTime="11/18/2009 3:14:52 AM" />
+  <file source="C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="12/18/2012 12:57:04 AM" />
+  <file source="C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="1/11/2013 1:05:24 PM" />
 </xapCache>

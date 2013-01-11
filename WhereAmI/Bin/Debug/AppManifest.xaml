@@ -2,15 +2,9 @@
   <Deployment.Parts>
     <AssemblyPart x:Name="WhereAmI" Source="WhereAmI.dll" />
     <AssemblyPart x:Name="Microsoft.Phone.Controls.Maps" Source="Microsoft.Phone.Controls.Maps.dll" />
-    <AssemblyPart x:Name="Microsoft.VisualStudio.QualityTools.UnitTesting.Silverlight" Source="Microsoft.VisualStudio.QualityTools.UnitTesting.Silverlight.dll" />
     <AssemblyPart x:Name="System.Reactive" Source="System.Reactive.dll" />
-    <AssemblyPart x:Name="System.Windows.Controls.Data.DataForm.Toolkit" Source="System.Windows.Controls.Data.DataForm.Toolkit.dll" />
-    <AssemblyPart x:Name="System.Windows.Controls.Data.Toolkit" Source="System.Windows.Controls.Data.Toolkit.dll" />
     <AssemblyPart x:Name="System.Windows.Controls.DataVisualization.Toolkit" Source="System.Windows.Controls.DataVisualization.Toolkit.dll" />
     <AssemblyPart x:Name="System.Windows.Controls" Source="System.Windows.Controls.dll" />
-    <AssemblyPart x:Name="System.Windows.Controls.Input.Toolkit" Source="System.Windows.Controls.Input.Toolkit.dll" />
-    <AssemblyPart x:Name="System.Windows.Controls.Layout.Toolkit" Source="System.Windows.Controls.Layout.Toolkit.dll" />
-    <AssemblyPart x:Name="System.Windows.Controls.Theming.Toolkit" Source="System.Windows.Controls.Theming.Toolkit.dll" />
     <AssemblyPart x:Name="System.Windows.Controls.Toolkit" Source="System.Windows.Controls.Toolkit.dll" />
   </Deployment.Parts>
 </Deployment>

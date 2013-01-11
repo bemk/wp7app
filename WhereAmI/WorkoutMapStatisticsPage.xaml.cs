@@ -20,7 +20,7 @@ namespace WhereAmI
     {
         MapPolyline routeLine;
         static Workout selectedWorkout = new Workout();
-
+        MapLayer layer = new MapLayer();
         public WorkoutMapStatisticsPage()
         {
             InitializeComponent();
@@ -28,8 +28,16 @@ namespace WhereAmI
             routeLine.Locations = selectedWorkout.routeLine.Locations; // Where the magic happens: Note: ALL routes MUST have a polyline, otherwise the application WILL ofcourse, CRASH!
             routeLine.Stroke = new SolidColorBrush(Colors.Blue);
             routeLine.StrokeThickness = 5;
-
+            Pushpin pStart = new Pushpin();
+            pStart.Content = "Start";
+            pStart.Background = new SolidColorBrush(Colors.Green);
+            Pushpin pFinish = new Pushpin();
+            pFinish.Content = "Finish";
+            pFinish.Background = new SolidColorBrush(Colors.Red);
+            layer.AddChild(pStart, new GeoCoordinate(routeLine.Locations.First().Latitude, routeLine.Locations.First().Longitude));
+            layer.AddChild(pFinish, new GeoCoordinate(routeLine.Locations.Last().Latitude, routeLine.Locations.Last().Longitude));
             map2.Children.Add(routeLine);
+            map2.Children.Add(layer);
             textBlock5.Text = selectedWorkout.workoutName;
             textBlock6.Text = selectedWorkout.startTime;
             textBlock7.Text = String.Format("{0:F2}", selectedWorkout.distanceRan);

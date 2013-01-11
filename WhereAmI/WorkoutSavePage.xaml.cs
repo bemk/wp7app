@@ -86,7 +86,7 @@ namespace WhereAmI
            
 
            MainPage.mainDatabase.addWorkoutToDatabase(workout);
-           MainPage.dataSave.saveDatabaseToIsolatedStorage(MainPage.mainDatabase, "WorkoutDatabase");
+           DataSaver<WorkoutDatabase>.saveDatabaseToIsolatedStorage(MainPage.mainDatabase, "WorkoutDatabase");
 
            NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.RelativeOrAbsolute));
         }

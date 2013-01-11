@@ -154,3 +154,28 @@ C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\WhereAmI.pdb
 C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\XapCacheFile.xml
 C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\WhereAmI.csprojResolveAssemblyReference.cache
 C:\Users\Andrew Servania\Documents\GitHub\wp7app\WhereAmI\obj\Debug\WorkoutGraphPage.g.i.cs
+C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\ApplicationIcon.png
+C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\Background.png
+C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\WhereAmI.dll
+C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\WhereAmI.pdb
+C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\AppManifest.xaml
+C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\WhereAmI.xap
+C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\Microsoft.Phone.Controls.Maps.dll
+C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\Microsoft.Phone.Controls.Maps.xml
+C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Windows.Controls.xml
+C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.pdb
+C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.xml
+C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Windows.Controls.Toolkit.pdb
+C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\System.Windows.Controls.Toolkit.xml
+C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\de\System.Windows.Controls.resources.dll
+C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\es\System.Windows.Controls.resources.dll
+C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\fr\System.Windows.Controls.resources.dll
+C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\it\System.Windows.Controls.resources.dll
+C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\ja\System.Windows.Controls.resources.dll
+C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\ko\System.Windows.Controls.resources.dll
+C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\zh-Hans\System.Windows.Controls.resources.dll
+C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\Bin\Debug\zh-Hant\System.Windows.Controls.resources.dll
+C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\obj\Debug\WorkoutGraphPage.g.i.cs
+C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\obj\Debug\WhereAmI.dll
+C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\obj\Debug\WhereAmI.pdb
+C:\Users\wp7dev\Documents\GitHub\wp7app\WhereAmI\obj\Debug\XapCacheFile.xml

@@ -23,6 +23,7 @@ using System.Threading;
 using System.IO;
 using System.Runtime.Serialization;
 using System.IO.IsolatedStorage;
+using System.Collections;
 
 namespace WhereAmI
 {
@@ -178,7 +179,7 @@ namespace WhereAmI
 
         private void displayPreviousWorkoutButton_Click(object sender, RoutedEventArgs e)
         {
-            mainDatabase = dataSave.loadDatabaseFromIsolatedStorage("WorkoutDatabase");
+            mainDatabase = DataSaver<WorkoutDatabase>.loadDatabaseFromIsolatedStorage("WorkoutDatabase");
             //if (mainDatabase != null)
             //{
             //    mainDatabase.returnAmountOfWorkoutsInDatabase();

@@ -17,9 +17,9 @@ namespace WhereAmI
     public class DataSaver<WorkoutDatabase>
     {
         private const string TargetFolderName = "WorkoutDatabaseFolder";
-        private DataContractSerializer dataSerializer;
-        private IsolatedStorageFile isoFile2;
-        IsolatedStorageFile isoFile1
+        private static DataContractSerializer dataSerializer;
+        private static IsolatedStorageFile isoFile2;
+        static IsolatedStorageFile isoFile1
         {
             get
             {
@@ -34,7 +34,7 @@ namespace WhereAmI
             dataSerializer = new DataContractSerializer(typeof(WorkoutDatabase));
         }
 
-        public void saveDatabaseToIsolatedStorage(WorkoutDatabase sourceData, String targetFileName)
+        public static void saveDatabaseToIsolatedStorage(WorkoutDatabase sourceData, String targetFileName)
         {
             string TargetFileName = String.Format("{0}/{1}.dat",TargetFolderName, targetFileName);
             
@@ -59,7 +59,7 @@ namespace WhereAmI
         {
             return isoFile1;
         }
-        public WorkoutDatabase loadDatabaseFromIsolatedStorage(string fileName)
+        public static WorkoutDatabase loadDatabaseFromIsolatedStorage(string fileName)
         {
             WorkoutDatabase retrievedDatabase = default(WorkoutDatabase);
             string TargetFileName = String.Format("{0}/{1}.dat",TargetFolderName, fileName);
